@@ -1,13 +1,62 @@
-<div class="center hero-unit">
-  <h1>Welcome to the Sample App</h1>
 
-  <h2>
-    This is the home page for the
-    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
+<div >
+	<h1 class="z">Египетская сказка</h1>
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <%= image_tag("Egypt.23.jpg") %>
+      <!--<div class="carousel-caption">
+	  </div> -->
+    </div>
+    <div class="item">
+      <%= image_tag("Egypt.25.jpg") %>  
+    </div>
+    <div class="item">
+      <%= image_tag("Egypt.24.jpg") %> 
+    </div>
+    
+  </div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+  </a>
 </div>
+	<div id="sidebarL">
+	    <ul><h2>Популярные курорты Египта </h2>
+		<li>Хургада</li>
+		<li>Шарм-эль-Шейх</li>
+		<li>Эль Гуна</li>
+		<li>Сафага</li>
+		<li>Макади Бей</li>
+		<li>Каир</li>
+		<li>Луксор</li>
+		</ul>
+		<h2 class="zzz">Хочешь получать новости о горящих турах в Египет?</h2>
+		<%= link_to "Зарегистрируйся, и будите в курсе всех акций!", signup_path, class: "btn btn-large btn-primary" %>
 
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+	</div>
+	<div id="content">
+		<h2 >Блок новостей </h2>
+		<h2 class="zzzz"><strong ><%= link_to "Знаменитую пирамиду Хеопса закрывают на ремонт, чтобы очистить от «наскальностей» туристов",   about_path %></strong></h2>
+			<h2 class="zzz">
+			На реставрацию закроется одно из древнейших в мире сооружений, знаменитая достопримечательность Египта, пирамида Хеопса. При этом самой основной причиной для реставрации станут многочисленные порчи, оставленные здесь иностранными туристами. Специалисты по сохранению культурного наследия Египта совместно с представителями министерства по делам древностей АРЕ после тщательного анализа ситуации пришли к выводу, что пирамида нуждается в срочной очистке от этих «памятников бескультурья».  </br></br>
+
+			<strong><%= link_to "В Каире запустили водное такси",   about_path %></strong> </br></br>
+
+			По Нилу поплывут такси: новое развлечение предлагает туристам и всем желающим Каир. Столица Египта борется с пробками, которые станут одной из тем заседания Правительства страны на следующей неделе. Именно тогда должна развернуться широкая дискуссия по поводу пароходиков с шашечками, идею которых предложили министерства транспорта, гидромелиорации и окружающей среды. Как сообщают источники в Министерстве гидромелиорации и водных ресурсов, всего за день такси будет совершать 15 поездок по Нилу. А Министр Хоссам Могази пообещал, что общее время в пути не превысит 20 минут. Первое речное такси отойдет от причала уже в январе.</h2>
+	</div>
+	
+</div>

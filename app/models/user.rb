@@ -16,6 +16,8 @@ class User < ActiveRecord::Base
                                    dependent:   :destroy
   has_many :followers, through: :reverse_relationships, source: :follower
   
+  
+
   def User.new_remember_token
     SecureRandom.urlsafe_base64
   end
@@ -23,8 +25,6 @@ class User < ActiveRecord::Base
   def User.encrypt(token)
     Digest::SHA1.hexdigest(token.to_s)
   end
-
-  
 
   private
 
